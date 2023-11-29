@@ -1,0 +1,20 @@
+{% extends "base.html"%}
+{% block content %}
+<br><br><br>
+<center>
+<a  href="{% url "homepage" %}"><button>Back</button></a>
+<form action="{% url "font" %}" method="GET">
+    <label>
+        <p>String:</p>
+        <input type="text" name="str_1">
+        <p>Repeating length:</p>
+        <input type="number" name="num_1">
+    </label>
+    <br>
+    <button>Submit</button>
+</form>
+{% if result %}
+<p>{{result}}</p>
+</center>
+{% endif %}
+{% endblock content %}

@@ -1,0 +1,21 @@
+{% extends "base.html"%}
+{% block content %}
+<center>
+<br><br><br>
+<a  href="{% url "homepage" %}"><button>Back</button></a>
+    <form action="{% url "order_total" %}" method="GET">
+        <label>
+            <p>Welcome to Good Burger, home of the good burger!</p>
+            <input type="number" name="Burger" placeholder="Burger Amount:">
+            <input type="number" name="Fries" placeholder="Fries Amount:">
+            <input type="number" name="Drink" placeholder="Drink Amount:">
+        </label>
+        <br>
+        <button>Confirm Order</button>
+    </form>
+    <p>total:</p>
+    {% if total is not None%}
+    ${{total}}
+</center>
+    {% endif %}
+{% endblock content %}

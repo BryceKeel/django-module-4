@@ -1,0 +1,22 @@
+{% extends "base.html"%}
+{% block content %}
+<br><br><br>
+<center>
+<a  href="{% url "homepage" %}"><button>Back</button></a>
+    <form action="{% url "teen"%}" method="GET">
+        <label>
+            <p>First Number:</p>
+            <input type="number" name="int_value1">
+            <p>Second Number:</p>
+            <input type="number" name="int_value2">
+            <p>Third Number:</p>
+            <input type="number" name="int_value3">
+        </label>
+        <br>
+        <button>Submit</button>
+    </form>
+    {% if total is not None%}
+    <p>{{total}}</p>
+</center>
+    {% endif %}
+{% endblock content %}

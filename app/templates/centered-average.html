@@ -1,0 +1,23 @@
+{% extends "base.html"%}
+{% block content %}
+<center>
+<a  href="{% url "homepage" %}"><button>Back</button></a>
+    <form action="{% url "center" %}" method="GET">
+        <label>
+            <p>Insert numbers to find averavge:</p>
+            <input type="number" name="val_1">
+            <input type="number" name="val_2">
+            <input type="number" name="val_3">
+            <input type="number" name="val_4">
+            <input type="number" name="val_5">
+            <input type="number" name="val_6">
+            <input type="number" name="val_7">
+        </label>
+        <br>
+        <button>Submit</button>
+    </form>
+    {% if average is not None%}
+    <p>{{average|floatformat:"0"}}</p>
+</center>
+    {% endif %}
+{% endblock content %}

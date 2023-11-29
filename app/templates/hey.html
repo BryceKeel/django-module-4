@@ -1,0 +1,17 @@
+{% extends "base.html"%}
+{% block content %}
+<br><br><br>
+<center>
+<a  href="{% url "homepage" %}"><button>Back</button></a>
+<form action="{% url "hey_name" %}" method="GET">
+    <label>
+        <p>Name:</p>
+        <input type="text" name="input_name">
+    </label>
+    <button>Submit</button>
+</form>
+{% if input_name is not None %}
+<p>Hey, {{input_name}}!</p>
+</center>
+{% endif %}
+{% endblock content %}

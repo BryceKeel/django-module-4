@@ -1,0 +1,24 @@
+{% extends "base.html"%}
+{% block content %}
+<br><br>
+<center>
+<a  href="{% url "homepage" %}"><button>Back</button></a>
+    <form action="{% url "age_in" %}" method="GET">
+        <label>
+            <p class="Fonted">Input your birthyear to find your age in another provided year.</p>
+            <p>Birthyear:</p>
+            <input type="number" name="birthyear">
+            <p>Provided Year:</P>
+            <input type="number" name="ageyear">
+        </label>
+        <br>
+        <button>Submit</button>
+    </form>
+    <br>
+    {% if answer is not None%}
+    <p>Being born in {{birthyear}} your age in {{ageyear}} is:</p>
+    <p class="AgeAnswer">{{answer}}</p>
+</center>
+    {% endif %}
+
+{% endblock content %}

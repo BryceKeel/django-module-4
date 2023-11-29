@@ -1,0 +1,12 @@
+{% extends "base.html" %} {% block content %}
+<center>
+    <h1><header> HomePage </header></h1>
+    <a href="{% url "hey_name" %}"><button> Hey &lt;name&gt;! </button></a>
+    <a href="{% url "age_in" %}"><button> Age In </button></a>
+    <a href="{% url "order_total" %}"><button> Order Total </button></a>
+    <a href="{% url "font" %}"><button> Font Times </button></a>
+    <a href="{% url "teen" %}"><button> No Teen Sum </button></a>
+    <a href="{% url "xyz" %}"><button> XYZ </button></a>
+    <a href="{% url "center" %}"><button> Centered Average </button></a>
+</center>
+{% endblock content %}
